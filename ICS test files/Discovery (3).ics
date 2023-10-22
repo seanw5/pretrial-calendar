@@ -1,0 +1,12 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Your Company//NONSGML v1.0//EN
+BEGIN:VEVENT
+UID:Discovery
+DTSTAMP:------------------------
+DTSTART:------------------------
+DTEND:------------------------
+LOCATION:Online
+SUMMARY:Discovery
+END:VEVENT
+END:VCALENDAR

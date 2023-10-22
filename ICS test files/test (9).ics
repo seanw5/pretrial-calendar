@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Your Company//NONSGML v1.0//EN
+BEGIN:VEVENT
+UID:123 - matter - Serve expert report on every party of record
+DTSTAMP:20231027T050520
+DTSTART:20231027T050520
+DTEND:20231027T050520
+LOCATION:Online
+SUMMARY:123 - matter - Serve expert report on every party of record
+END:VEVENT
+BEGIN:VEVENT
+UID:123 - matter - Serve responding expert report on every party of record
+DTSTAMP:20231028T050520
+DTSTART;TZID=America/Toronto:20231028T090000
+DTEND;TZID=America/Toronto:20231028T093000
+LOCATION:Online
+SUMMARY:123 - matter - Serve responding expert report on every party of record
+END:VEVENT
+END:VCALENDAR

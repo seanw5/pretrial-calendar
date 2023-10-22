@@ -1,0 +1,64 @@
+/* why doesn't this work? */
+.welcome{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* .welcome{
+    margin-left: 15px;
+} */
+
+/* .description1{
+    margin-left: 15px;
+}
+
+.body1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} */
+
+.left15{
+    margin-left:15px;
+}
+
+.appointment1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.inputField input {
+    display: inline-block;
+}
+
+.inputField label {
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.inputField{
+    width: 40%;
+    float: left;
+}
+
+.row{
+    display: block;
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.event1_section{
+    display: block;
+    float: left;
+    width: 20%;
+}
+
+.padding10{
+    padding-bottom: 10px;
+}
+
+.add_button{
+    /* font-size: 1.5em; */
+    /* margin-block-start: 0.83em; */
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    /* font-weight: bold; */
+}
