@@ -43,12 +43,14 @@ function buttonClick(){
         ics_date_start.setDate(court_date.getDate() - event_days_arr[i]);
         ics_date_start.setHours(9-(ics_date_start.getTimezoneOffset()/60));
         ics_date_start.setMinutes(0);
+        ics_date_start.setSeconds(0,0);
 
         ics_date_end = new Date();
         ics_date_end.setDate(court_date.getDate() - event_days_arr[i]);
         //ics_date_end.setHours(9);
         ics_date_end.setHours(9-(ics_date_start.getTimezoneOffset()/60))
         ics_date_end.setMinutes(30);
+        ics_date_end.setSeconds(0,0);
         
         // console.log(court_date.getDate());
         // console.log(ics_event_name);
@@ -97,8 +99,17 @@ function buttonClick(){
 
 }
 
+// when page initially loads, runs this 'function'
 $(function(){
     console.log(Intl.DateTimeFormat().resolvedOptions().timeZone)
+    // listens for click
+    $('.dropdown-item').click(function(){
+        var dropdown_text = $(this).text();
+        $('#pretrial_dropdown').val(dropdown_text);
+        console.log(dropdown_text);
+
+    });
+
 });
 
     

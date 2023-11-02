@@ -62,3 +62,8 @@
     margin-inline-end: 0px;
     /* font-weight: bold; */
 }
+
+.inputLabel{
+    line-height: 40px;
+    padding-right: 10px;
+}

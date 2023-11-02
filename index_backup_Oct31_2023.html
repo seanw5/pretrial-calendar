@@ -37,7 +37,7 @@
         <div class="row row-cols-auto">
             <div class="col">
                     <label for="courtDate">Court Date:</label>
-                    <input type="date" id="courtDate" class="form-control" name="courtDate">
+                    <input type="date" id="courtDate" name="courtDate">
             </div>
             <div class="col">
                 <label for="fileNo">File #:</label>
@@ -45,7 +45,6 @@
                     id="fileNo"
                     name="fileNo"
                     placeholder="12345"
-                    class="form-control"
                 />
             </div>
             <div class="col">
@@ -54,7 +53,6 @@
                     id="matterName"
                     name="matterName"
                     placeholder="Matter"
-                    class="form-control"
                 />
             </div>
         </div>
@@ -88,38 +86,11 @@
 
                 <div class="eventFields">
                     <div class="row row-cols-auto">
-                      <div class="col-5">
-                        <!-- <label for="eventName">Event Name:</label> -->
-
-                        <!-- from bootstrap for input group with dropdown on the right-->
-                        <div class="input-group mb-3">
-                            <label for="pretrial_dropdown" class="inputLabel">Event Name:</label>
-                            <input type="text" class="form-control" id="pretrial_dropdown" aria-label="Text input with dropdown button">
-                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                              <li><a class="dropdown-item" href="#">Serve expert report on every party of record </a></li>
-                              <li><a class="dropdown-item" href="#">Serve responding expert report on every party of record</a></li>
-                              <li><a class="dropdown-item" href="#">Request contents of expert file from other party</a></li>
-                              <li><a class="dropdown-item" href="#">Serve demand on expert to attend trial for cross-examination</a></li>
-                              <li><a class="dropdown-item" href="#">Serve objection to admissibility of other party's expert report </a></li>
-                              <li><a class="dropdown-item" href="#">File notice of trial</a></li>
-                              <li><a class="dropdown-item" href="#">File and serve trial brief</a></li>
-                              <li><a class="dropdown-item" href="#">Serve witness list</a></li>
-                              <li><a class="dropdown-item" href="#">Serve notice to mediate</a></li>
-                              <li><a class="dropdown-item" href="#">Serve formal offer to settle</a></li>
-                              <li><a class="dropdown-item" href="#">Schedule Pre-Trial Conference</a></li>
-                              <li><a class="dropdown-item" href="#">Request Trial Management Conference</a></li>
-                              <li><a class="dropdown-item" href="#">File Trial Certificate</a></li>
-                              <li><a class="dropdown-item" href="#">File Trial Record</a></li>
-                              <li><a class="dropdown-item" href="#">Produce expert file to other party</a></li>
-                              <li><a class="dropdown-item" href="#">Serve subpoenas on witnesses to attend trial</a></li>
-                              <li><a class="dropdown-item" href="#">Serve notice to call adverse witness</a></li>
-                              <li><a class="dropdown-item" href="#">Serve notice to produce</a></li>
-                            </ul>
-                          </div>
-
-
-                        <!-- <input type="text" id="eventName" name="eventName" class="eventName" list="predefEvents">
+                      <div class="col">
+                        <label for="eventName">Event Name:</label>
+                        <!-- 'list' definition is for drop down -->
+                        <input type="text" id="eventName" name="eventName" class="eventName" list="predefEvents">
+                        <!-- create drop down list below -->
                         <datalist id="predefEvents">
                             <option value="Serve expert report on every party of record"></option>
                             <option value="Serve responding expert report on every party of record"></option>
@@ -138,10 +109,10 @@
                             <option value="Produce expert file to other party"></option>
                             <option value="Serve subpoenas on witnesses to attend trial"></option>
                             <option value="Serve notice to call adverse witness"></option>
-                            <option value="Serve notice to produce"></option> 
-                        </datalist> -->
-                      </div>
+                            <option value="Serve notice to produce"></option>
 
+                        </datalist>
+                      </div>
                       <div class="col">
                         <label for="daysPriorCD"># of days prior to court date:</label>
                         <input type="text" id="daysPriorCD" name="daysPriorCD" class="daysPriorCD">
