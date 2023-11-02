@@ -103,16 +103,25 @@ function buttonClick(){
 $(function(){
     console.log(Intl.DateTimeFormat().resolvedOptions().timeZone)
     // listens for click
-    $('.dropdown-item').click(function(){
-        var dropdown_text = $(this).text();
-        $('#pretrial_dropdown').val(dropdown_text);
-        console.log(dropdown_text);
-
-    });
-
+    // $('.dropdown-item').click(function(){
+    //     var dropdown_text = $(this).text();
+    //     // $(this).val(dropdown_text);
+    //     console.log(dropdown_text);
+    //     $(this).parent().parent().siblings('.eventName').val(dropdown_text);
+    //     console.log($(this).parent().parent().attr('class'));
+    // });
+    listenAdd();
 });
 
-    
+function listenAdd(){
+    $('.dropdown-item').click(function(){
+        var dropdown_text = $(this).text();
+        // $(this).val(dropdown_text);
+        console.log(dropdown_text);
+        $(this).parent().parent().siblings('.eventName').val(dropdown_text);
+        console.log($(this).parent().parent().attr('class'));
+    });
+}
 
 
 var number_of_events = 1;
@@ -126,6 +135,7 @@ function buttonAdd(){
     var event_fields = $('.eventFields');
     $('.event1').append(event_fields.html());
     
+    listenAdd();
     // if (number_of_events ==2){
         // $('.event1').append("<li>new event "+number_of_events + "</li>")
         // $('.event1').append("<li>" + unique_event + "</li>")
