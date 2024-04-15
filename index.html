@@ -12,26 +12,42 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
         <!-- logo for browser tab below this line -->
         <!-- <link rel="icon" href="favicon.png"> -->
+        
     </head>
 
     <body class="body1 left15">
-
+    
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/date-holidays@3.16.13/dist/umd.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <h1 class="welcome">Pretrial Event Reminders Generator</h1>
-        <p class="description1">Use the tool below to input all of your pretrial events and this tool will generate a calendar invite (*.ics) that will allow you to add all of your pretrial event reminders to your calendar all at once!</p>
+        <p class="description1">Use the tool below to input all of your pretrial events and this tool will generate a calendar invite (*.ics) that will allow you to add all of your pretrial event reminders to your Canadian calendar all at once!</p>
 
-        <!-- <form>
-            <label for="courtDate">Court Date:</label><br>
-            <input type="date" id="courtDate" name="courtDate"><br>
 
-        </form> -->
-
-        <!-- <div class="fileNo">File #:</div> -->
-        <!-- <input type="text" id="fileNo" name="fileNo"> -->
-
-        <!-- <div class="matterName">Matter Name:</div> -->
-        <!-- <input type="text" id="matterName" name="matterName"> -->
+        <div class="row row-cols-auto">
+            <div class="col">
+                    <label for="cdnProvince">Canadian Province:</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control dropdown_text_display" id="cdnProvince" aria-label="Province input with dropdown button">
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                          <li><a class="dropdown-item prov-drop" href="#" value="AB">AB: Alberta</a></li>
+                          <li><a class="dropdown-item prov-drop" href="#" value="BC">BC: British Columbia</a></li>
+                          <li><a class="dropdown-item prov-drop" href="#" value="MB">MB: Manitoba</a></li>
+                          <li><a class="dropdown-item prov-drop" href="#" value="NB">NB: New Brunswick</a></li>
+                          <li><a class="dropdown-item prov-drop" href="#" value="NL">NL: Newfoundland and Labrador</a></li>
+                          <li><a class="dropdown-item prov-drop" href="#" value="NS">NS: Nova Scotia</a></li>
+                          <li><a class="dropdown-item prov-drop" href="#" value="NT">NT: Northwest Territories</a></li>
+                          <li><a class="dropdown-item prov-drop" href="#" value="NU">NU: Nunavut</a></li>
+                          <li><a class="dropdown-item prov-drop" href="#" value="ON">ON: Ontario</a></li>
+                          <li><a class="dropdown-item prov-drop" href="#" value="PE">PE: Prince Edward Island</a></li>
+                          <li><a class="dropdown-item prov-drop" href="#" value="QC">QC: Quebec</a></li>
+                          <li><a class="dropdown-item prov-drop" href="#" value="SK">SK: Saskatchewan</a></li>
+                          <li><a class="dropdown-item prov-drop" href="#" value="YT">YT: Yukon</a></li>
+                        </ul>
+                      </div>
+            </div>
+        </div>
 
 
         <div class="row row-cols-auto">
@@ -94,7 +110,7 @@
                         <!-- taken from bootstrap for input group with dropdown on the right-->
                         <div class="input-group mb-3">
                             <label for="eventName" class="inputLabel">Event Name:</label>
-                            <input type="text" class="form-control eventName" aria-label="Text input with dropdown button">
+                            <input type="text" class="form-control dropdown_text_display eventName" id="eventName" aria-label="Text input with dropdown button">
                             <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
                             <ul class="dropdown-menu dropdown-menu-end">
                               <li><a class="dropdown-item" href="#">Serve expert report on every party of record </a></li>
@@ -142,9 +158,9 @@
                         </datalist> -->
                       </div>
 
-                      <div class="col">
-                        <label for="daysPriorCD"># of days prior to court date:</label>
-                        <input type="text" id="daysPriorCD" name="daysPriorCD" class="daysPriorCD">
+                      <div class="col-5">
+                        <label for="daysPriorCD" class="inputLabel"># of days prior to court date:</label>
+                        <input type="text" id="daysPriorCD" name="daysPriorCD" class="form-control daysPriorCD">
                       </div>
                     </div>
                 </div>
@@ -173,6 +189,12 @@
             </div>
         </div>
 
+        <!-- test getting Canadian holidays -->
+        <div class="row">
+            <div class="col">
+                <button class="click_button" onclick="holidaysCAN()">Test: Get Canadian Holidays</button>
+            </div>
+        </div>
 
         <ol class="list">
             <!-- <li>list item1</li> -->
@@ -182,7 +204,7 @@
         <!-- jquery library needs internet; command / gives comment for language -->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script src="script.js"></script>
-
+        
 
     </body>
 

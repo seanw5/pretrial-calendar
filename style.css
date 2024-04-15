@@ -64,6 +64,21 @@
 }
 
 .inputLabel{
+    width: 100%;
     line-height: 40px;
     padding-right: 10px;
 }
+
+/* try to do line break with css */
+#dropdown::after{
+    content: "\a";
+    white-space: pre;
+}
+
+.dropdown_text_display{
+    /* px for border is clockwise from top left */
+    border-radius: 0.375rem 0px 0px 0.375rem !important; 
+}
+/* .daysPriorCD{
+    line-height: 40px;
+} */
